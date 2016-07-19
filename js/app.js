@@ -16,21 +16,46 @@
 var app = angular.module('example359', []).
     config(['$routeProvider', function ($routeProvider) {
       $routeProvider.
-        when('/', { templateUrl: 'pages/index.html', activetab: 'projects', controller: HomeCtrl }).
+        when('/', { templateUrl: 'pages/product1.html', activetab: 'projects', controller: HomeCtrl }).
         when('/project/:projectId', {
           templateUrl: function (params) { return 'pages/' + params.projectId + '.html'; },
-          controller: ProjectCtrl,
-          activetab: 'projects'
+          controller: HomeCtrl,
+          activetab: 'home'
         }).
-        when('/privacy', {
-          templateUrl: 'pages/privacy.html',
-          controller: PrivacyCtrl,
-          activetab: 'privacy'
+        when('/facilities', {
+          templateUrl: 'pages/facilities.html',
+          controller: FacilitiesCtrl,
+          activetab: 'facilities'
         }).
         when('/about', {
           templateUrl: 'pages/about.html',
           controller: AboutCtrl,
           activetab: 'about'
+        }).
+		when('/subscription', {
+          templateUrl: 'pages/subscription.html',
+          controller: SubscriptionCtrl,
+          activetab: 'subscription'
+        }).
+		when('/schedule', {
+          templateUrl: 'pages/schedule.html',
+          controller: ScheduleCtrl,
+          activetab: 'schedule'
+        }).
+		when('/gallery', {
+          templateUrl: 'pages/gallery.html',
+          controller: GalleryCtrl,
+          activetab: 'gallery'
+        }).
+		when('/news', {
+          templateUrl: 'pages/news.html',
+          controller: NewsCtrl,
+          activetab: 'news'
+        }).
+		when('/contact', {
+          templateUrl: 'pages/contact.html',
+          controller: ContactCtrl,
+          activetab: 'contact'
         }).
         otherwise({ redirectTo: '/' });
     }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {

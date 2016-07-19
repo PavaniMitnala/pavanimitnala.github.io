@@ -19,8 +19,23 @@ function HomeCtrl($scope, $http) {
 function ProjectCtrl($scope, $http) {
 }
 
-function PrivacyCtrl($scope, $http, $timeout) {
+function FacilitiesCtrl($scope, $http, $timeout) {
 }
 
 function AboutCtrl($scope, $http, $timeout) {
+}
+
+function SubscriptionCtrl($scope, $http, $timeout) {
+}
+
+function ScheduleCtrl($scope, $http, $timeout) {
+}
+
+function GalleryCtrl($scope, $http, $timeout) {
+}
+
+function NewsCtrl($scope, $http, $timeout) {
+}
+
+function ContactCtrl($scope, $http, $timeout) {
 }

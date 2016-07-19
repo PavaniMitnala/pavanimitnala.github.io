@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Script Tutorials" />
-    <title>Responsive website using AngularJS | Script Tutorials</title>
-    <meta name="description" content="Responsive website using AngularJS - demo page">
+    <title>Apex Badminton Centre</title>
+    <meta name="description" content="Apex Badminton Centre">
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -20,43 +20,38 @@
 </head>
 <body>
     <header>
+		<div class="wraptop">
+			<div class="phone">Phone: +91-9740376699 | info@apexbadmintoncentre.com</div>
+			<div class="links">
+				<a href="https://www.facebook.com/apexbadmintoncentre/" target="_blank" class="imgLink">f</a>
+				&nbsp;&nbsp;
+				<a href="#!" class="imgLink">G+</a>
+			</div>
+			
+		</div>
+		
         <div class="wrap">
-            <!-- logo -->
-            <a href="#!"><img class="logo" src="images/logo_apex.jpg" /></a>
+		    <!-- logo -->
+			<a href="#!"><img class="logo" src="images/logo_2-Copy.jpg" /></a>
 
             <!-- navigation menu -->
             <nav>
                 <ul>
-                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" >Home</a></li>
-                    <li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}">Booking</a></li>
-                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About us</a></li>
-                    <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
+                    <li><a id="workBtn" href="#!/product1" ng-class="{activeSmall:part == 'product1'}" >Home</a></li>
+					<li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About Us</a></li>
+                    <li><a id="privacyBtn" href="#!/facilities" ng-class="{activeSmall:part == 'facilities'}">Facilities</a></li>
+					<li><a id="privacyBtn" href="#!/subscription" ng-class="{activeSmall:part == 'subscription'}">Subscription</a></li>
+					<li><a id="privacyBtn" href="#!/schedule" ng-class="{activeSmall:part == 'schedule'}">Schedule</a></li>
+                    <li><a id="aboutBtn" href="#!/gallery" ng-class="{activeSmall:part == 'gallery'}">Gallery</a></li>
+					<li><a id="aboutBtn" href="#!/news" ng-class="{activeSmall:part == 'news'}">News & Events</a></li>
+					<li><a id="aboutBtn" href="#!/contact" ng-class="{activeSmall:part == 'contact'}">Contact Us</a></li>
+					
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- contact us form -->
-    <div class="paddRow contactRow">
-        <div class="wrap">
-            <div class="head">Contact Us</div>
-            <img class="close" src="images/close.png" ng-click="closeForm()" />
-            <form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
-                <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
-                <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
-                <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
-                <button class="btn green">send message</button>
-            </form>
-
-            <!-- contact us form response messages -->
-            <div ng-show="process" style="text-align:center">
-                <img class="loader" src="images/loader.png" />
-            </div>
-            <div ng-show="success"><p>Your message has been sent, thank you.</p></div>
-        </div>
-    </div>
-
-    <!-- main content -->
     <div style="position:relative">
         <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
     </div>
