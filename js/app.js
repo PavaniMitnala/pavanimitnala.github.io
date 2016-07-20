@@ -84,6 +84,6 @@ var app = angular.module('example359', []).
   }]);
 
 app.config(['$locationProvider', function($location) {
-    $location.hashPrefix('!');
+    $location.hashPrefix('');
 }]);
 
