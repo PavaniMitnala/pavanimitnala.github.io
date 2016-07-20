@@ -84,6 +84,7 @@ var app = angular.module('example359', []).
   }]);
 
 app.config(['$locationProvider', function($location) {
-    $location.hashPrefix('');
+	$location.html5Mode(true);
+    //$location.hashPrefix('');
 }]);
 
